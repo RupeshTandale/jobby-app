@@ -1,25 +1,59 @@
+import Header from "../header";
+import DisplayJobs from "../displayJobs";
+import FilterSection from "../filterSection";
 import "./index.css";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Cookies from "js-cookie";
-import { useNavigate } from "react-router-dom";
 
 const Jobs = () => {
-  const navigate = useNavigate();
-
-  const currentCookie = Cookies.get("jwtToken");
-
-  useEffect(() => {
-    if (currentCookie === undefined) {
-      navigate("/login");
-    }
+  const [allValues, setValues] = useState({
+    jobItems: [],
   });
 
+  const token = Cookies.get("jwtToken");
+
+
+  useEffect(() => {
+    const fetchJobs = async () => {
+      const api = "https://apis.ccbp.in/jobs";
+
+      const options = {
+        method: "GET",
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      };
+
+      const response = await fetch(api, options);
+
+      const fetchData = await response.json();
+
+      if(response.ok === true){
+        setValues({ ...allValues, jobItems: fetchData.jobs});
+      }
+
+      console.log(fetchData.jobs);
+    };
+
+    fetchJobs();
+  }, []);
+
   return (
-    <>
-      <div>
-        <h1>Jobs Component</h1>
+    <div>
+      <Header />
+      <div className="filter-display-all-jobs-cont">
+        <div className="filter-section-cont">
+          <FilterSection />
+        </div>
+        <div className="display-all-jobs-cont">
+          <ul>
+            {allValues.jobItems.map(each => 
+              <DisplayJobs jobDetails = {each} key={each.id}/>
+            )}
+          </ul>
+        </div>
       </div>
-    </>
+    </div>
   );
 };
 

@@ -1,0 +1,38 @@
+.jobs-card{
+    width: 80%;
+    padding: 15px;
+    background-color:  #222831;
+    border-radius: 15px;
+    list-style: none;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.top-section{
+    display: flex;
+    align-items: center;
+}
+
+.web-logo{
+    width: 70px;
+    margin-right: 20px;
+}
+
+.star-icon{
+    color: gold;
+    margin-right: 10px;
+}
+
+.loc-empTyp-cont{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.my-icons{
+    margin-right: 5px;
+}
+
+.ruler-line{
+    background-color: aliceblue;
+}

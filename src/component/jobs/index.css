@@ -1,0 +1,19 @@
+.filter-display-all-jobs-cont{
+    width: 100%;
+    /* height: 100vh; */
+    background-color: black;
+    display: flex;
+    padding: 30px;
+}
+
+.filter-section-cont{
+    width: 25%;
+    height: 100%;
+}
+
+.display-all-jobs-cont{
+    width: 75%;
+    height: 100%;
+    margin-left: 20px;
+
+}
