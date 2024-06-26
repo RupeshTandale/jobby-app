@@ -30,13 +30,11 @@ const DisplayJobs = (props) => {
   return (
     <li className="jobs-card">
       <div className="top-section">
-        <div>
         <img
           src={jobDetails.company_logo_url}
           alt="web logo"
           className="web-logo"
         />
-        </div>
         <div>
           <h4>{jobDetails.title}</h4>
           <FaStar className="star-icon" />

@@ -1,5 +1,5 @@
 .jobs-card{
-    width: 80%;
+    width: 100%;
     padding: 15px;
     background-color:  #222831;
     border-radius: 15px;
@@ -10,7 +10,7 @@
 
 .top-section{
     display: flex;
-    align-items: center;
+    /* align-items: center; */
 }
 
 .web-logo{
@@ -34,5 +34,5 @@
 }
 
 .ruler-line{
-    background-color: aliceblue;
+    background-color: rgb(255, 255, 255);
 }
