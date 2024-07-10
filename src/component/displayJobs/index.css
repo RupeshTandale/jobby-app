@@ -36,3 +36,7 @@
 .ruler-line{
     background-color: rgb(255, 255, 255);
 }
+
+.detailed-link:hover{
+    text-decoration: none;
+}

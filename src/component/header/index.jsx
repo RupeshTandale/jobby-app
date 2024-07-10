@@ -1,8 +1,14 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './index.css';
+import Cookies from "js-cookie";
 
 const Header = () =>{
+    const navigate = useNavigate();
 
+    const handelLogout =()=>{
+        Cookies.remove("jwtToken",{path:'/'});          // To remove the cookies stored we have to provide the token name and not the value.
+        navigate("/login");
+    }
 
     return (
         <div className='nav-bar-cont'>
@@ -24,7 +30,7 @@ const Header = () =>{
                 </li>
 
                 <li>
-                    <button className='btn btn-primary'>Logout</button>
+                    <button className='btn btn-primary' onClick={handelLogout}>Logout</button>
                 </li>
 
             </ul>

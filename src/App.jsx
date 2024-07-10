@@ -3,6 +3,7 @@ import Login from "./component/login";
 import Jobs from "./component/jobs";
 import PageNotFound from "./component/not found";
 import ProtectedRoute from "./component/protectedRoute";
+import DetailedSection from "./component/detailedSection";
 import { Routes, Route } from "react-router-dom";
 
 function App() {
@@ -14,6 +15,8 @@ function App() {
         <Route path="/login" element={<Login/>}></Route>
 
         <Route path="/jobs" element={<ProtectedRoute Component={Jobs}/>}></Route>
+
+        <Route path="/jobs/:id" element={<ProtectedRoute Component={DetailedSection}/>}></Route>
 
         <Route path="/*" element={<PageNotFound/>}></Route>
       </Routes>

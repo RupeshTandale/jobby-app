@@ -1,6 +1,7 @@
 import "./index.css";
 import { FaStar, FaBriefcase } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 /*
 company_logo_url: "https://assets.ccbp.in/frontend/react-js/jobby-app/netflix-img.png"
@@ -28,6 +29,7 @@ const DisplayJobs = (props) => {
   const { jobDetails } = props;
 
   return (
+    <Link to={`/jobs/${jobDetails.id}`} className="detailed-link">
     <li className="jobs-card">
       <div className="top-section">
         <img
@@ -54,8 +56,8 @@ const DisplayJobs = (props) => {
         <h4>Description</h4>
         <p>{jobDetails.job_description}</p>
     </li>
+  </Link>
   );
-  <hr />
 };
 
 export default DisplayJobs;

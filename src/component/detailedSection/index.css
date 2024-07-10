@@ -1,0 +1,107 @@
+.main-cont{
+    width: 100%;
+    /* height: 100vh; */
+    background-color: black;
+}
+
+.details-container{
+    width: 100%;
+    /* height: 100vh; */
+    display: flex;
+    justify-content: center;
+    padding:75px 150px;
+    color: white;
+}
+
+.cards-details{
+    width: 80%;
+    background-color: #222831;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.top-section{
+    display: flex;
+    /* align-items: center; */
+    color: white;
+}
+
+.image{
+    height: 80px;
+    width: 80px;
+    margin-right: 20px;
+}
+
+.star-icon{
+    margin-right: 10px;
+}
+
+.loc-empType-cont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon{
+    margin-right: 5px;
+}
+
+.ruler-section{
+    width: 100%;
+    background-color: white;
+}
+
+.description-section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.visit-link{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    align-items: center;
+}
+.visit{
+    font-size: 20px;
+}
+.visit-icon{
+   font-size: 20px;
+}
+.description-details{
+    margin-top: 15px;
+    font-size: 16px;
+    font-weight: 400;
+}
+.skill-section{
+    display: flex;
+    gap: 30px;
+    /* justify-content: space-around; */
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.company-background{
+    display: flex;
+}
+
+.life-at-work{
+    width: 50%;
+}
+
+.cmp-img{
+    display: flex;
+    justify-content: center;
+    width: 50%;
+}
+
+.company-image{
+    object-fit: cover;
+}
+
+.cmp-desc{
+    margin-top: 15px;
+    font-size: 16px;
+    font-weight: 400;
+}
+
